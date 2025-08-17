@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "testingmod",
+	"version": "${version}",
+	"name": "Testingmod",
+	"description": "A mod",
+	"authors": [
+		"MysteryMan"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/testingmod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.elisa.testingmod.Testingmod"
+		],
+		"fabric-datagen": [
+			"net.elisa.testingmod.TestingmodDataGenerator"
+		],
+        "client": [
+          "net.elisa.testingmod.TestingmodClient"
+        ]
+	},
+	"mixins": [
+		"testingmod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.17.2",
+		"minecraft": "~1.21.8",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

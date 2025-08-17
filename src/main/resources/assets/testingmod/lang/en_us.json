@@ -1,0 +1,11 @@
+{
+  "item.testingmod.pink_garnet": "Pink Garnet",
+  "item.testingmod.raw_pink_garnet": "Raw Pink Garnet",
+  "item.testingmod.pink_garnet_block": "Block of Pink Garnet",
+  "item.testingmod.raw_pink_garnet_block": "Block of Raw Pink Garnet",
+  "item.testingmod.pink_garnet_ore": "Pink Garnet Ore",
+  "item.testingmod.deepslate_pink_garnet_ore": "Deepslate Pink Garnet Ore",
+
+  "itemgroup.testingmod.pink_garnet_items": "Pink Garnet Items",
+  "itemgroup.testingmod.pink_garnet_blocks": "Pink Garnet Blocks"
+}
