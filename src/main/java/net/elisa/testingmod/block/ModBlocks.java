@@ -1,6 +1,7 @@
 package net.elisa.testingmod.block;
 
 import net.elisa.testingmod.Testingmod;
+import net.elisa.testingmod.block.custom.MagicBlock;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
@@ -15,6 +16,8 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
+
+import java.util.Objects;
 
 public class ModBlocks {
 
@@ -31,10 +34,21 @@ public class ModBlocks {
             AbstractBlock.Settings.create().strength(4f)
                     .requiresTool().sounds(BlockSoundGroup.DEEPSLATE),3,6);
 
+    public static final Block MAGIC_BLOCK = registerMagicBlock("magic_block",
+            AbstractBlock.Settings.create().strength(1f)
+                    .requiresTool());
+
 
     private static Block registerBlock(String name, AbstractBlock.Settings blockSettings) {
         RegistryKey<Block> key = RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Testingmod.MOD_ID, name));
         Block block = new Block(blockSettings.registryKey(key));
+        registerBlockItem(name, block);
+        return Registry.register(Registries.BLOCK, key, block);
+    }
+
+    private static Block registerMagicBlock(String name, AbstractBlock.Settings blockSettings) {
+        RegistryKey<Block> key = RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Testingmod.MOD_ID, name));
+        Block block = new MagicBlock(blockSettings.registryKey(key));
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, key, block);
     }

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+
+  "category": "misc",
+
+  "key":{
+    "#": "minecraft:nether_star",
+    "$": "testingmod:pink_garnet_block",
+    "%": "minecraft:stick"
+  },
+
+  "pattern": [
+    " $ ",
+    " # ",
+    " % "
+  ],
+
+  "result": {
+    "count": 1,
+    "id": "testingmod:chisel"
+  }
+
+}
