@@ -3,8 +3,11 @@ import net.elisa.testingmod.block.ModBlocks;
 import net.elisa.testingmod.item.ModItemGroups;
 import net.elisa.testingmod.item.ModItems;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.client.item.v1.ItemTooltipCallback;
 import net.fabricmc.fabric.api.registry.FuelRegistryEvents;
+import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.item.FuelRegistry;
+import net.minecraft.text.Text;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -23,6 +26,16 @@ public class Testingmod implements ModInitializer {
 
         FuelRegistryEvents.BUILD.register((builder, context) -> {
             builder.add(ModItems.STARLIGHT_ASHES, 600);
+        });
+
+        ItemTooltipCallback.EVENT.register((itemStack, tooltipContext, tooltipType, list) -> {
+            if (itemStack.isOf(ModItems.CHISEL)) {
+                if (Screen.hasShiftDown()) {
+                    list.add(Text.translatable("tooltip.testingmod.chisel.shift_down"));
+                } else {
+                    list.add(Text.translatable("tooltip.testingmod.chisel"));
+                }
+            }
         });
 	}
 }
