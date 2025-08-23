@@ -1,0 +1,4 @@
+// 1.21.8	-999999999-01-01T00:00:00	Testingmod/Tags for minecraft:block
+9e454d5455ae40a4f91ee56055cba3350f252ded data/minecraft/tags/block/mineable/pickaxe.json
+398ec40e0d47d7e5f23e896b0d9512780fdefa0d data/minecraft/tags/block/needs_diamond_tool.json
+f257a94ec3c40a14e649be4e6e085151244636cd data/minecraft/tags/block/needs_iron_tool.json
