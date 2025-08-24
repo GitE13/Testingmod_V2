@@ -5,10 +5,24 @@
   "item.testingmod.raw_pink_garnet_block": "Block of Raw Pink Garnet",
   "item.testingmod.pink_garnet_ore": "Pink Garnet Ore",
   "item.testingmod.deepslate_pink_garnet_ore": "Deepslate Pink Garnet Ore",
+
   "item.testingmod.chisel": "Chisel",
   "item.testingmod.magic_block": "Magic Block",
+
   "item.testingmod.cauliflower": "Cauliflower",
   "item.testingmod.starlight_ashes": "Starlight Ashes",
+
+  "item.testingmod.pink_garnet_stairs": "Pink Garnet Stairs",
+  "item.testingmod.pink_garnet_slab": "Pink Garnet Slab",
+  "item.testingmod.pink_garnet_button": "Pink Garnet Button",
+  "item.testingmod.pink_garnet_pressure_plate": "Pink Garnet Pressure Plate",
+  "item.testingmod.pink_garnet_fence": "Pink Garnet Fence",
+  "item.testingmod.pink_garnet_fence_gate": "Pink Garnet Fence Gate",
+  "item.testingmod.pink_garnet_wall": "Pink Garnet Wall",
+  "item.testingmod.pink_garnet_door": "Pink Garnet Door",
+  "item.testingmod.pink_garnet_trapdoor": "Pink Garnet Trapdoor",
+
+
   "tooltip.testingmod.chisel":  "Press shift for more info",
   "tooltip.testingmod.chisel.shift_down":  "This item chisels blocks into Bricks",
 

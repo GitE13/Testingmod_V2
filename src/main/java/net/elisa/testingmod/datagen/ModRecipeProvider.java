@@ -8,6 +8,7 @@ import net.minecraft.data.recipe.RecipeExporter;
 import net.minecraft.data.recipe.RecipeGenerator;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
+import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
 
@@ -48,6 +49,18 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .input('#', Items.STICK)
                         .criterion(hasItem(ModBlocks.PINK_GARNET_BLOCK), conditionsFromItem(ModBlocks.PINK_GARNET_BLOCK))
                         .offerTo(exporter);
+
+                net.minecraft.recipe.Ingredient pink_Garnet_Ingredient = Ingredient.ofItem(ModItems.PINK_GARNET);
+
+                createDoorRecipe(ModBlocks.PINK_GARNET_DOOR, pink_Garnet_Ingredient).criterion(hasItem(ModItems.PINK_GARNET), conditionsFromItem(ModItems.PINK_GARNET)).offerTo(exporter);
+                createTrapdoorRecipe(ModBlocks.PINK_GARNET_TRAPDOOR,pink_Garnet_Ingredient).criterion(hasItem(ModItems.PINK_GARNET), conditionsFromItem(ModItems.PINK_GARNET)).offerTo(exporter);
+                createSlabRecipe(RecipeCategory.MISC,ModBlocks.PINK_GARNET_SLAB,pink_Garnet_Ingredient).criterion(hasItem(ModItems.PINK_GARNET), conditionsFromItem(ModItems.PINK_GARNET)).offerTo(exporter);
+                createFenceRecipe(ModBlocks.PINK_GARNET_FENCE,pink_Garnet_Ingredient).criterion(hasItem(ModItems.PINK_GARNET), conditionsFromItem(ModItems.PINK_GARNET)).offerTo(exporter);
+                createFenceGateRecipe(ModBlocks.PINK_GARNET_FENCE_GATE,pink_Garnet_Ingredient).criterion(hasItem(ModItems.PINK_GARNET), conditionsFromItem(ModItems.PINK_GARNET)).offerTo(exporter);
+                createButtonRecipe(ModBlocks.PINK_GARNET_BUTTON,pink_Garnet_Ingredient).criterion(hasItem(ModItems.PINK_GARNET), conditionsFromItem(ModItems.PINK_GARNET)).offerTo(exporter);
+                createPressurePlateRecipe(RecipeCategory.MISC,ModBlocks.PINK_GARNET_PRESSURE_PLATE,pink_Garnet_Ingredient).criterion(hasItem(ModItems.PINK_GARNET), conditionsFromItem(ModItems.PINK_GARNET)).offerTo(exporter);
+                createStairsRecipe(ModBlocks.PINK_GARNET_STAIRS,pink_Garnet_Ingredient).criterion(hasItem(ModItems.PINK_GARNET), conditionsFromItem(ModItems.PINK_GARNET)).offerTo(exporter);
+                getWallRecipe(RecipeCategory.MISC,ModBlocks.PINK_GARNET_WALL,pink_Garnet_Ingredient).criterion(hasItem(ModItems.PINK_GARNET), conditionsFromItem(ModItems.PINK_GARNET)).offerTo(exporter);
             }
         };
     }

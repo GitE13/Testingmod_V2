@@ -4,6 +4,15 @@
     "testingmod:raw_pink_garnet_block",
     "testingmod:pink_garnet_ore",
     "testingmod:deepslate_pink_garnet_ore",
-    "testingmod:magic_block"
+    "testingmod:magic_block",
+    "testingmod:pink_garnet_slab",
+    "testingmod:pink_garnet_stairs",
+    "testingmod:pink_garnet_button",
+    "testingmod:pink_garnet_pressure_plate",
+    "testingmod:pink_garnet_wall",
+    "testingmod:pink_garnet_fence",
+    "testingmod:pink_garnet_fence_gate",
+    "testingmod:pink_garnet_door",
+    "testingmod:pink_garnet_trapdoor"
   ]
 }

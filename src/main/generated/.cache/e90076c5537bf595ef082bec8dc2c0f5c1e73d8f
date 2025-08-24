@@ -1,4 +1,7 @@
 // 1.21.8	-999999999-01-01T00:00:00	Testingmod/Tags for minecraft:block
-9e454d5455ae40a4f91ee56055cba3350f252ded data/minecraft/tags/block/mineable/pickaxe.json
+df592b8124c074bf6fe726edee12a7867ba1af0c data/minecraft/tags/block/fence_gates.json
+3dfef5aa32839188b204e36ea21fc3a0ab338d97 data/minecraft/tags/block/fences.json
+b1636569828704e6712a04806f51330e03b96c32 data/minecraft/tags/block/mineable/pickaxe.json
 398ec40e0d47d7e5f23e896b0d9512780fdefa0d data/minecraft/tags/block/needs_diamond_tool.json
 f257a94ec3c40a14e649be4e6e085151244636cd data/minecraft/tags/block/needs_iron_tool.json
+8260404e6baac2bda58c3385ce4202cc62b5cff5 data/minecraft/tags/block/walls.json
