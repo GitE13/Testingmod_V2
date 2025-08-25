@@ -22,9 +22,12 @@
   "item.testingmod.pink_garnet_door": "Pink Garnet Door",
   "item.testingmod.pink_garnet_trapdoor": "Pink Garnet Trapdoor",
 
+  "item.testingmod.pink_garnet_lamp": "Pink Garnet Lamp",
 
-  "tooltip.testingmod.chisel":  "Press shift for more info",
+
+  "tooltip.testingmod.chisel":  "Press §eShift§r for more Information",
   "tooltip.testingmod.chisel.shift_down":  "This item chisels blocks into Bricks",
+  "tooltip.testingmod.magic_block": "This block is very, very §9MAGICAL§r",
 
 
   "itemgroup.testingmod.pink_garnet_items": "Pink Garnet Items",

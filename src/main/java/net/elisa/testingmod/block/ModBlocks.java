@@ -2,6 +2,7 @@ package net.elisa.testingmod.block;
 
 import net.elisa.testingmod.Testingmod;
 import net.elisa.testingmod.block.custom.MagicBlock;
+import net.elisa.testingmod.block.custom.PinkGarnetLampBlock;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
@@ -26,18 +27,20 @@ public class ModBlocks {
 
     public static final Block PINK_GARNET_ORE = registerAdvancedBlock("pink_garnet_ore",
             new ExperienceDroppingBlock(UniformIntProvider.create(2,5),
-            getSettings("pink_garnet_ore",AbstractBlock.Settings.create().strength(3f)
-                    .requiresTool().sounds(BlockSoundGroup.STONE)) ) );
+                    getSettings("pink_garnet_ore",
+                            AbstractBlock.Settings.create().strength(3f)
+                                    .requiresTool().sounds(BlockSoundGroup.STONE)) ) );
     public static final Block DEEPSLATE_PINK_GARNET_ORE = registerAdvancedBlock("deepslate_pink_garnet_ore",
             new ExperienceDroppingBlock(UniformIntProvider.create(3,6),
                     getSettings("deepslate_pink_garnet_ore",
-                    AbstractBlock.Settings.create().strength(4f)
-                    .requiresTool().sounds(BlockSoundGroup.DEEPSLATE)) ) );
+                            AbstractBlock.Settings.create().strength(4f)
+                                    .requiresTool().sounds(BlockSoundGroup.DEEPSLATE)) ) );
 
     public static final Block MAGIC_BLOCK = registerAdvancedBlock("magic_block",
-            new MagicBlock(getSettings("magic_block",
-                AbstractBlock.Settings.create().strength(1f)
-                    .requiresTool()) ) );
+            new MagicBlock(
+                    getSettings("magic_block",
+                            AbstractBlock.Settings.create().strength(1f)
+                                    .requiresTool()) ) );
 
 
     public static final Block PINK_GARNET_STAIRS = registerAdvancedBlock("pink_garnet_stairs",
@@ -86,6 +89,12 @@ public class ModBlocks {
                             AbstractBlock.Settings.create().strength(2f)
                                     .requiresTool().nonOpaque()) ) );
 
+    public static final Block PINK_GARNET_LAMP = registerAdvancedBlock("pink_garnet_lamp",
+            new PinkGarnetLampBlock(
+                    getSettings("pink_garnet_lamp",
+                            AbstractBlock.Settings.create().strength(1f)
+                                    .requiresTool()
+                                    .luminance(state -> state.get(PinkGarnetLampBlock.CLICKED) ? 15 : 0)) ) );
 
 
     private static Block registerNormalBlock(String name, AbstractBlock.Settings blockSettings) {

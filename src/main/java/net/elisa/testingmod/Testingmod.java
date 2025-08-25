@@ -1,5 +1,6 @@
 package net.elisa.testingmod;
 import net.elisa.testingmod.block.ModBlocks;
+import net.elisa.testingmod.component.ModDataComponentTypes;
 import net.elisa.testingmod.item.ModItemGroups;
 import net.elisa.testingmod.item.ModItems;
 import net.fabricmc.api.ModInitializer;
@@ -24,6 +25,8 @@ public class Testingmod implements ModInitializer {
         ModItems.registerModItems();
         ModBlocks.registerModBlocks();
 
+        ModDataComponentTypes.registerDataComponentTypes();
+
         FuelRegistryEvents.BUILD.register((builder, context) -> {
             builder.add(ModItems.STARLIGHT_ASHES, 600);
         });
@@ -35,6 +38,12 @@ public class Testingmod implements ModInitializer {
                 } else {
                     list.add(Text.translatable("tooltip.testingmod.chisel"));
                 }
+                if(itemStack.get(ModDataComponentTypes.COORDINATES) != null){
+                    list.add(Text.literal("Last block changed at "
+                            + itemStack.get(ModDataComponentTypes.COORDINATES)));
+                }
+            } else if (itemStack.isOf(ModBlocks.MAGIC_BLOCK.asItem())) {
+                list.add(Text.translatable("tooltip.testingmod.magic_block"));
             }
         });
 	}
