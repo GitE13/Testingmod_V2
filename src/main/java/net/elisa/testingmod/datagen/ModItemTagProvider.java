@@ -7,6 +7,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.registry.tag.ItemTags;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -24,5 +25,19 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider{
                 .add(Items.APPLE)
                 .add(ModItems.PINK_GARNET)
                 .add(ModItems.RAW_PINK_GARNET);
+
+        valueLookupBuilder(ModTags.Items.PINK_GARNET_REPAIR)
+                .add(ModItems.PINK_GARNET);
+        valueLookupBuilder(ItemTags.AXES)
+                .add(ModItems.PINK_GARNET_AXE);
+        valueLookupBuilder(ItemTags.SHOVELS)
+                .add(ModItems.PINK_GARNET_SHOVEL);
+        valueLookupBuilder(ItemTags.PICKAXES)
+                .add(ModItems.PINK_GARNET_PICKAXE);
+        valueLookupBuilder(ItemTags.SWORDS)
+                .add(ModItems.PINK_GARNET_SWORD);
+        valueLookupBuilder(ItemTags.HOES)
+                .add(ModItems.PINK_GARNET_HOE);
     }
+
 }

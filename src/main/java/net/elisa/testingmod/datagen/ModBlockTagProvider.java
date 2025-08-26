@@ -1,6 +1,7 @@
 package net.elisa.testingmod.datagen;
 
 import net.elisa.testingmod.block.ModBlocks;
+import net.elisa.testingmod.util.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;
@@ -31,19 +32,19 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.PINK_GARNET_DOOR)
                 .add(ModBlocks.PINK_GARNET_TRAPDOOR);
 
-
-
         valueLookupBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.PINK_GARNET_ORE)
                 .add(ModBlocks.RAW_PINK_GARNET_BLOCK);
-
         valueLookupBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
+                .add(ModBlocks.MAGIC_BLOCK)
                 .add(ModBlocks.DEEPSLATE_PINK_GARNET_ORE);
 
         valueLookupBuilder(BlockTags.FENCES).add(ModBlocks.PINK_GARNET_FENCE);
-
         valueLookupBuilder(BlockTags.FENCE_GATES).add(ModBlocks.PINK_GARNET_FENCE_GATE);
-
         valueLookupBuilder(BlockTags.WALLS).add(ModBlocks.PINK_GARNET_WALL);
+
+        valueLookupBuilder(ModTags.Blocks.NEEDS_PINK_GARNET_TOOL)
+                .add(ModBlocks.MAGIC_BLOCK)
+                .addTag(BlockTags.NEEDS_IRON_TOOL);
     }
 }

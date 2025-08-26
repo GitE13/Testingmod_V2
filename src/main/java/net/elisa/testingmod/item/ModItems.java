@@ -30,6 +30,21 @@ public class ModItems {
 
     public static final Item STARLIGHT_ASHES = registerItem("starlight_ashes");
 
+    public static final Item PINK_GARNET_SWORD = registerAdvancedItem("pink_garnet_sword",
+            new Item(getSettings("pink_garnet_sword",
+                    new Item.Settings().sword(ModToolMaterials.PINK_GARNET,3,-2.4f)) ) );
+    public static final Item PINK_GARNET_PICKAXE = registerAdvancedItem("pink_garnet_pickaxe",
+            new Item(getSettings("pink_garnet_pickaxe",
+                    new Item.Settings().pickaxe(ModToolMaterials.PINK_GARNET,1,-2.8f)) ) );
+    public static final Item PINK_GARNET_SHOVEL = registerAdvancedItem("pink_garnet_shovel",
+            new Item(getSettings("pink_garnet_shovel",
+                    new Item.Settings().axe(ModToolMaterials.PINK_GARNET,1.5f,-3.0f)) ) );
+    public static final Item PINK_GARNET_AXE = registerAdvancedItem("pink_garnet_axe",
+            new Item(getSettings("pink_garnet_axe",
+                    new Item.Settings().shovel(ModToolMaterials.PINK_GARNET,6,-3.2f)) ) );
+    public static final Item PINK_GARNET_HOE = registerAdvancedItem("pink_garnet_hoe",
+            new Item(getSettings("pink_garnet_hoe",
+                    new Item.Settings().hoe(ModToolMaterials.PINK_GARNET,0,-3.0f)) ) );
 
     private static Item registerItem(String name) {
         Identifier id = Identifier.of(Testingmod.MOD_ID, name);

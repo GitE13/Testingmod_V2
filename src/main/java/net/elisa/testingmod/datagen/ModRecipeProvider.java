@@ -50,6 +50,47 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModBlocks.PINK_GARNET_BLOCK), conditionsFromItem(ModBlocks.PINK_GARNET_BLOCK))
                         .offerTo(exporter);
 
+                createShaped(RecipeCategory.MISC, ModItems.PINK_GARNET_SWORD)
+                        .pattern(" G ")
+                        .pattern(" G ")
+                        .pattern(" S ")
+                        .input('G', ModItems.PINK_GARNET)
+                        .input('S', Items.STICK)
+                        .criterion(hasItem(ModItems.PINK_GARNET), conditionsFromItem(ModItems.PINK_GARNET))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.MISC, ModItems.PINK_GARNET_AXE)
+                        .pattern("GG ")
+                        .pattern("GS ")
+                        .pattern(" S ")
+                        .input('G', ModItems.PINK_GARNET)
+                        .input('S', Items.STICK)
+                        .criterion(hasItem(ModItems.PINK_GARNET), conditionsFromItem(ModItems.PINK_GARNET))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.MISC, ModItems.PINK_GARNET_PICKAXE)
+                        .pattern("GGG")
+                        .pattern(" S ")
+                        .pattern(" S ")
+                        .input('G', ModItems.PINK_GARNET)
+                        .input('S', Items.STICK)
+                        .criterion(hasItem(ModItems.PINK_GARNET), conditionsFromItem(ModItems.PINK_GARNET))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.MISC, ModItems.PINK_GARNET_SHOVEL)
+                        .pattern(" G ")
+                        .pattern(" S ")
+                        .pattern(" S ")
+                        .input('G', ModItems.PINK_GARNET)
+                        .input('S', Items.STICK)
+                        .criterion(hasItem(ModItems.PINK_GARNET), conditionsFromItem(ModItems.PINK_GARNET))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.MISC, ModItems.PINK_GARNET_HOE)
+                        .pattern("GG ")
+                        .pattern(" S ")
+                        .pattern(" S ")
+                        .input('G', ModItems.PINK_GARNET)
+                        .input('S', Items.STICK)
+                        .criterion(hasItem(ModItems.PINK_GARNET), conditionsFromItem(ModItems.PINK_GARNET))
+                        .offerTo(exporter);
+
                 net.minecraft.recipe.Ingredient pink_Garnet_Ingredient = Ingredient.ofItem(ModItems.PINK_GARNET);
 
                 createDoorRecipe(ModBlocks.PINK_GARNET_DOOR, pink_Garnet_Ingredient).criterion(hasItem(ModItems.PINK_GARNET), conditionsFromItem(ModItems.PINK_GARNET)).offerTo(exporter);

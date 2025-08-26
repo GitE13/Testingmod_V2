@@ -29,6 +29,12 @@
   "tooltip.testingmod.chisel.shift_down":  "This item chisels blocks into Bricks",
   "tooltip.testingmod.magic_block": "This block is very, very §9MAGICAL§r",
 
+  "item.testingmod.pink_garnet_sword": "Pink Garnet Sword",
+  "item.testingmod.pink_garnet_pickaxe": "Pink Garnet Pickaxe",
+  "item.testingmod.pink_garnet_shovel": "Pink Garnet Shovel",
+  "item.testingmod.pink_garnet_axe": "Pink Garnet Axe",
+  "item.testingmod.pink_garnet_hoe": "Pink Garnet Hoe",
+
 
   "itemgroup.testingmod.pink_garnet_items": "Pink Garnet Items",
   "itemgroup.testingmod.pink_garnet_blocks": "Pink Garnet Blocks"
