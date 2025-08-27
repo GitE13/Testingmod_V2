@@ -6,12 +6,15 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.recipe.RecipeExporter;
 import net.minecraft.data.recipe.RecipeGenerator;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
@@ -20,11 +23,53 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         super(output, registriesFuture);
     }
 
+
     @Override
     protected RecipeGenerator getRecipeGenerator(RegistryWrapper.WrapperLookup wrapperLookup, RecipeExporter recipeExporter) {
+        List<Character> GENERIC_CHARS = Arrays.asList('a','b','c','d','e','f','g','h','i','j');
+
         return new RecipeGenerator(wrapperLookup, recipeExporter) {
+            private void GenerateRecipe(String NameofRecipe, List<Item> Items, RecipeCategory category, Item output, Item ItemToUnlock){
+                int UniqueItems = 0;
+                List<Character> UsedCharacters = new ArrayList<>();
+                List<Item> UsedItems = new ArrayList<>();
+                int CharIndex = 0;
+                for (int i = 0; i < 9; i++) {
+                    if (Items.get(i) != null)
+                        if (!UsedItems.contains(Items.get(i))){
+                            UsedItems.add(Items.get(i));
+                            UsedCharacters.add(GENERIC_CHARS.get(CharIndex));
+                            CharIndex++;
+                            UniqueItems++;
+                        }
+                }
+                String PatternString = "";
+                for (Item item: Items) {
+                    if (item == null){
+                        PatternString += " ";
+                    }
+                    else{
+                        PatternString += UsedCharacters.get(UsedItems.indexOf(item));
+                    }
+                }
+
+
+                net.minecraft.data.recipe.ShapedRecipeJsonBuilder Recipe = createShaped(category, output)
+                        .pattern(PatternString.substring(0,3))
+                        .pattern(PatternString.substring(3,6))
+                        .pattern(PatternString.substring(6,9));
+                for (int i = 0; i < UniqueItems; i++) {
+                    Recipe.input(UsedCharacters.get(i),UsedItems.get(i));
+                }
+                Recipe.criterion(hasItem(ItemToUnlock), conditionsFromItem(ItemToUnlock));
+                Recipe.offerTo(exporter, NameofRecipe);
+
+            }
             @Override
             public void generate() {
+
+
+
                 List<ItemConvertible> PINK_GARNET_SMELTABLES = List.of(ModItems.RAW_PINK_GARNET, ModBlocks.PINK_GARNET_ORE,
                         ModBlocks.DEEPSLATE_PINK_GARNET_ORE);
                 offerSmelting(PINK_GARNET_SMELTABLES, RecipeCategory.MISC, ModItems.PINK_GARNET, 0.25f, 200, "pink_garnet");
@@ -40,56 +85,31 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 offerReversibleCompactingRecipes(RecipeCategory.BUILDING_BLOCKS,ModItems.RAW_PINK_GARNET,
                         RecipeCategory.DECORATIONS,ModBlocks.RAW_PINK_GARNET_BLOCK);
 
-                createShaped(RecipeCategory.MISC, ModItems.CHISEL)
-                        .pattern(" % ")
-                        .pattern(" * ")
-                        .pattern(" # ")
-                        .input('%', ModBlocks.PINK_GARNET_BLOCK)
-                        .input('*', Items.NETHER_STAR)
-                        .input('#', Items.STICK)
-                        .criterion(hasItem(ModBlocks.PINK_GARNET_BLOCK), conditionsFromItem(ModBlocks.PINK_GARNET_BLOCK))
-                        .offerTo(exporter);
 
-                createShaped(RecipeCategory.MISC, ModItems.PINK_GARNET_SWORD)
-                        .pattern(" G ")
-                        .pattern(" G ")
-                        .pattern(" S ")
-                        .input('G', ModItems.PINK_GARNET)
-                        .input('S', Items.STICK)
-                        .criterion(hasItem(ModItems.PINK_GARNET), conditionsFromItem(ModItems.PINK_GARNET))
-                        .offerTo(exporter);
-                createShaped(RecipeCategory.MISC, ModItems.PINK_GARNET_AXE)
-                        .pattern("GG ")
-                        .pattern("GS ")
-                        .pattern(" S ")
-                        .input('G', ModItems.PINK_GARNET)
-                        .input('S', Items.STICK)
-                        .criterion(hasItem(ModItems.PINK_GARNET), conditionsFromItem(ModItems.PINK_GARNET))
-                        .offerTo(exporter);
-                createShaped(RecipeCategory.MISC, ModItems.PINK_GARNET_PICKAXE)
-                        .pattern("GGG")
-                        .pattern(" S ")
-                        .pattern(" S ")
-                        .input('G', ModItems.PINK_GARNET)
-                        .input('S', Items.STICK)
-                        .criterion(hasItem(ModItems.PINK_GARNET), conditionsFromItem(ModItems.PINK_GARNET))
-                        .offerTo(exporter);
-                createShaped(RecipeCategory.MISC, ModItems.PINK_GARNET_SHOVEL)
-                        .pattern(" G ")
-                        .pattern(" S ")
-                        .pattern(" S ")
-                        .input('G', ModItems.PINK_GARNET)
-                        .input('S', Items.STICK)
-                        .criterion(hasItem(ModItems.PINK_GARNET), conditionsFromItem(ModItems.PINK_GARNET))
-                        .offerTo(exporter);
-                createShaped(RecipeCategory.MISC, ModItems.PINK_GARNET_HOE)
-                        .pattern("GG ")
-                        .pattern(" S ")
-                        .pattern(" S ")
-                        .input('G', ModItems.PINK_GARNET)
-                        .input('S', Items.STICK)
-                        .criterion(hasItem(ModItems.PINK_GARNET), conditionsFromItem(ModItems.PINK_GARNET))
-                        .offerTo(exporter);
+                GenerateRecipe("chisel",Arrays.asList(
+                        null,ModBlocks.PINK_GARNET_BLOCK.asItem(),null,
+                        null,Items.NETHER_STAR,null,
+                        null,Items.STICK,null), RecipeCategory.TOOLS, ModItems.CHISEL, ModItems.PINK_GARNET);
+                GenerateRecipe("pink_garnet_sword",Arrays.asList(
+                        null,ModItems.PINK_GARNET,null,
+                        null,ModItems.PINK_GARNET,null,
+                        null,Items.STICK,null), RecipeCategory.TOOLS, ModItems.PINK_GARNET_SWORD, ModItems.PINK_GARNET);
+                GenerateRecipe("pink_garnet_axe",Arrays.asList(
+                        ModItems.PINK_GARNET,ModItems.PINK_GARNET,null,
+                        ModItems.PINK_GARNET,Items.STICK,null,
+                        null,Items.STICK,null), RecipeCategory.TOOLS, ModItems.PINK_GARNET_AXE, ModItems.PINK_GARNET);
+                GenerateRecipe("pink_garnet_pickaxe",Arrays.asList(
+                        ModItems.PINK_GARNET,ModItems.PINK_GARNET,ModItems.PINK_GARNET,
+                        null,Items.STICK,null,
+                        null,Items.STICK,null), RecipeCategory.TOOLS, ModItems.PINK_GARNET_PICKAXE, ModItems.PINK_GARNET);
+                GenerateRecipe("pink_garnet_shovel",Arrays.asList(
+                        null,ModItems.PINK_GARNET,null,
+                        null,Items.STICK,null,
+                        null,Items.STICK,null), RecipeCategory.TOOLS, ModItems.PINK_GARNET_SHOVEL, ModItems.PINK_GARNET);
+                GenerateRecipe("pink_garnet_hoe",Arrays.asList(
+                        ModItems.PINK_GARNET,ModItems.PINK_GARNET,null,
+                        null,Items.STICK,null,
+                        null,Items.STICK,null), RecipeCategory.TOOLS, ModItems.PINK_GARNET_HOE, ModItems.PINK_GARNET);
 
                 net.minecraft.recipe.Ingredient pink_Garnet_Ingredient = Ingredient.ofItem(ModItems.PINK_GARNET);
 

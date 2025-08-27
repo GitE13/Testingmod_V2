@@ -2,17 +2,16 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "key": {
-    "a": "testingmod:pink_garnet_block",
-    "b": "minecraft:nether_star",
-    "c": "minecraft:stick"
+    "a": "testingmod:pink_garnet",
+    "b": "minecraft:stick"
   },
   "pattern": [
     " a ",
     " b ",
-    " c "
+    " b "
   ],
   "result": {
     "count": 1,
-    "id": "testingmod:chisel"
+    "id": "testingmod:pink_garnet_shovel"
   }
 }
