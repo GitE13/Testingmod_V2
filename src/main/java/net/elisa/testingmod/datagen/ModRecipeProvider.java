@@ -111,6 +111,11 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         null,Items.STICK,null,
                         null,Items.STICK,null), RecipeCategory.TOOLS, ModItems.PINK_GARNET_HOE, ModItems.PINK_GARNET);
 
+                GenerateRecipe("pink_garnet_hammer",Arrays.asList(
+                        ModBlocks.PINK_GARNET_BLOCK.asItem(),ModBlocks.PINK_GARNET_BLOCK.asItem(),ModBlocks.PINK_GARNET_BLOCK.asItem(),
+                        null,Items.STICK,null,
+                        null,Items.DIAMOND,null), RecipeCategory.TOOLS, ModItems.PINK_GARNET_HAMMER, ModBlocks.PINK_GARNET_BLOCK.asItem());
+
                 net.minecraft.recipe.Ingredient pink_Garnet_Ingredient = Ingredient.ofItem(ModItems.PINK_GARNET);
 
                 createDoorRecipe(ModBlocks.PINK_GARNET_DOOR, pink_Garnet_Ingredient).criterion(hasItem(ModItems.PINK_GARNET), conditionsFromItem(ModItems.PINK_GARNET)).offerTo(exporter);

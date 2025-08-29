@@ -3,8 +3,10 @@ import net.elisa.testingmod.block.ModBlocks;
 import net.elisa.testingmod.component.ModDataComponentTypes;
 import net.elisa.testingmod.item.ModItemGroups;
 import net.elisa.testingmod.item.ModItems;
+import net.elisa.testingmod.util.HammerUsageEvent;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.item.v1.ItemTooltipCallback;
+import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.fabricmc.fabric.api.registry.FuelRegistryEvents;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.item.FuelRegistry;
@@ -46,5 +48,8 @@ public class Testingmod implements ModInitializer {
                 list.add(Text.translatable("tooltip.testingmod.magic_block"));
             }
         });
+
+
+        PlayerBlockBreakEvents.BEFORE.register(new HammerUsageEvent());
 	}
 }

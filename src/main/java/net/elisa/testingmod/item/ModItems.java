@@ -2,6 +2,7 @@ package net.elisa.testingmod.item;
 
 import net.elisa.testingmod.Testingmod;
 import net.elisa.testingmod.item.custom.ChiselItem;
+import net.elisa.testingmod.item.custom.HammerItem;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
@@ -45,6 +46,10 @@ public class ModItems {
     public static final Item PINK_GARNET_HOE = registerAdvancedItem("pink_garnet_hoe",
             new Item(getSettings("pink_garnet_hoe",
                     new Item.Settings().hoe(ModToolMaterials.PINK_GARNET,0,-3.0f)) ) );
+
+    public static final Item PINK_GARNET_HAMMER = registerAdvancedItem("pink_garnet_hammer",
+            new HammerItem(getSettings("pink_garnet_hammer",
+                    new Item.Settings().pickaxe(ModToolMaterials.PINK_GARNET,7,-3.4f)) ) );
 
     private static Item registerItem(String name) {
         Identifier id = Identifier.of(Testingmod.MOD_ID, name);
