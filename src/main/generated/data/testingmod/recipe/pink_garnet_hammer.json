@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "a": "testingmod:pink_garnet_block",
+    "b": "minecraft:stick",
+    "c": "minecraft:diamond"
+  },
+  "pattern": [
+    "aaa",
+    " b ",
+    " c "
+  ],
+  "result": {
+    "count": 1,
+    "id": "testingmod:pink_garnet_hammer"
+  }
+}
