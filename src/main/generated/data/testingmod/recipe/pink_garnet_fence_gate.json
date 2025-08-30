@@ -3,7 +3,7 @@
   "category": "redstone",
   "key": {
     "#": "minecraft:stick",
-    "W": "testingmod:pink_garnet"
+    "W": "testingmod:pink_garnet_block"
   },
   "pattern": [
     "#W#",

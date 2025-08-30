@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "redstone",
   "ingredients": [
-    "testingmod:pink_garnet"
+    "testingmod:pink_garnet_block"
   ],
   "result": {
     "count": 1,

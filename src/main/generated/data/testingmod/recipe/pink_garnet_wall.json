@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": "testingmod:pink_garnet"
+    "#": "testingmod:pink_garnet_block"
   },
   "pattern": [
     "###",

@@ -4,5 +4,6 @@ b6cb6067cccd4cffc4441309a1264efb320173d6 data/minecraft/tags/item/axes.json
 479fad003be5f5cb673ce19e8f207e459d689448 data/minecraft/tags/item/pickaxes.json
 3fadb3a9435dfe4b912e9d1f78fb3480c133d6c8 data/minecraft/tags/item/shovels.json
 0d5226d6da807f1554aee9286f0a17f60acc7bcd data/minecraft/tags/item/swords.json
+2e39f876e0e08c00cdeef3e22b75a66e0cec08c9 data/minecraft/tags/item/trimmable_armor.json
 1dfdffd60622c8f7b98669353b4ae2abd50e657b data/testingmod/tags/item/pink_garnet_repair.json
 ff8a568d3d667c7aa96224fd3ad85817515d4b3e data/testingmod/tags/item/transformable_items.json

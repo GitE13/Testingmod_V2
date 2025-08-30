@@ -10,6 +10,7 @@ import net.minecraft.component.type.ConsumableComponent;
 import net.minecraft.component.type.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
+import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -50,6 +51,19 @@ public class ModItems {
     public static final Item PINK_GARNET_HAMMER = registerAdvancedItem("pink_garnet_hammer",
             new HammerItem(getSettings("pink_garnet_hammer",
                     new Item.Settings().pickaxe(ModToolMaterials.PINK_GARNET,7,-3.4f)) ) );
+
+    public static final Item PINK_GARNET_HELMET = registerAdvancedItem("pink_garnet_helmet",
+            new Item(getSettings("pink_garnet_helmet",
+                    new Item.Settings().armor(ModArmorMaterials.PINK_GARNET_ARMOR_MATERIAL, EquipmentType.HELMET)) ) );
+    public static final Item PINK_GARNET_CHESTPLATE = registerAdvancedItem("pink_garnet_chestplate",
+            new Item(getSettings("pink_garnet_chestplate",
+                    new Item.Settings().armor(ModArmorMaterials.PINK_GARNET_ARMOR_MATERIAL, EquipmentType.CHESTPLATE)) ) );
+    public static final Item PINK_GARNET_LEGGINGS = registerAdvancedItem("pink_garnet_leggings",
+            new Item(getSettings("pink_garnet_leggings",
+                    new Item.Settings().armor(ModArmorMaterials.PINK_GARNET_ARMOR_MATERIAL, EquipmentType.LEGGINGS)) ) );
+    public static final Item PINK_GARNET_BOOTS = registerAdvancedItem("pink_garnet_boots",
+            new Item(getSettings("pink_garnet_boots",
+                    new Item.Settings().armor(ModArmorMaterials.PINK_GARNET_ARMOR_MATERIAL, EquipmentType.BOOTS).maxDamage(10)) ) );
 
     private static Item registerItem(String name) {
         Identifier id = Identifier.of(Testingmod.MOD_ID, name);

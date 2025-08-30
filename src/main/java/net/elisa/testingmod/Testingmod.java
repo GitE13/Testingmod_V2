@@ -9,6 +9,7 @@ import net.fabricmc.fabric.api.client.item.v1.ItemTooltipCallback;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.fabricmc.fabric.api.registry.FuelRegistryEvents;
 import net.minecraft.client.gui.screen.Screen;
+import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.item.FuelRegistry;
 import net.minecraft.text.Text;
 import org.slf4j.Logger;

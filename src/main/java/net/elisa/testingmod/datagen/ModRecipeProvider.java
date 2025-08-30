@@ -89,44 +89,83 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 GenerateRecipe("chisel",Arrays.asList(
                         null,ModBlocks.PINK_GARNET_BLOCK.asItem(),null,
                         null,Items.NETHER_STAR,null,
-                        null,Items.STICK,null), RecipeCategory.TOOLS, ModItems.CHISEL, ModItems.PINK_GARNET);
+                        null,Items.STICK,null),
+                        RecipeCategory.TOOLS, ModItems.CHISEL, ModItems.PINK_GARNET);
                 GenerateRecipe("pink_garnet_sword",Arrays.asList(
                         null,ModItems.PINK_GARNET,null,
                         null,ModItems.PINK_GARNET,null,
-                        null,Items.STICK,null), RecipeCategory.TOOLS, ModItems.PINK_GARNET_SWORD, ModItems.PINK_GARNET);
+                        null,Items.STICK,null),
+                        RecipeCategory.TOOLS, ModItems.PINK_GARNET_SWORD, ModItems.PINK_GARNET);
                 GenerateRecipe("pink_garnet_axe",Arrays.asList(
                         ModItems.PINK_GARNET,ModItems.PINK_GARNET,null,
                         ModItems.PINK_GARNET,Items.STICK,null,
-                        null,Items.STICK,null), RecipeCategory.TOOLS, ModItems.PINK_GARNET_AXE, ModItems.PINK_GARNET);
+                        null,Items.STICK,null),
+                        RecipeCategory.TOOLS, ModItems.PINK_GARNET_AXE, ModItems.PINK_GARNET);
                 GenerateRecipe("pink_garnet_pickaxe",Arrays.asList(
                         ModItems.PINK_GARNET,ModItems.PINK_GARNET,ModItems.PINK_GARNET,
                         null,Items.STICK,null,
-                        null,Items.STICK,null), RecipeCategory.TOOLS, ModItems.PINK_GARNET_PICKAXE, ModItems.PINK_GARNET);
+                        null,Items.STICK,null),
+                        RecipeCategory.TOOLS, ModItems.PINK_GARNET_PICKAXE, ModItems.PINK_GARNET);
                 GenerateRecipe("pink_garnet_shovel",Arrays.asList(
                         null,ModItems.PINK_GARNET,null,
                         null,Items.STICK,null,
-                        null,Items.STICK,null), RecipeCategory.TOOLS, ModItems.PINK_GARNET_SHOVEL, ModItems.PINK_GARNET);
+                        null,Items.STICK,null),
+                        RecipeCategory.TOOLS, ModItems.PINK_GARNET_SHOVEL, ModItems.PINK_GARNET);
                 GenerateRecipe("pink_garnet_hoe",Arrays.asList(
                         ModItems.PINK_GARNET,ModItems.PINK_GARNET,null,
                         null,Items.STICK,null,
-                        null,Items.STICK,null), RecipeCategory.TOOLS, ModItems.PINK_GARNET_HOE, ModItems.PINK_GARNET);
+                        null,Items.STICK,null),
+                        RecipeCategory.TOOLS, ModItems.PINK_GARNET_HOE, ModItems.PINK_GARNET);
 
                 GenerateRecipe("pink_garnet_hammer",Arrays.asList(
                         ModBlocks.PINK_GARNET_BLOCK.asItem(),ModBlocks.PINK_GARNET_BLOCK.asItem(),ModBlocks.PINK_GARNET_BLOCK.asItem(),
                         null,Items.STICK,null,
-                        null,Items.DIAMOND,null), RecipeCategory.TOOLS, ModItems.PINK_GARNET_HAMMER, ModBlocks.PINK_GARNET_BLOCK.asItem());
+                        null,Items.DIAMOND,null),
+                        RecipeCategory.TOOLS, ModItems.PINK_GARNET_HAMMER, ModBlocks.PINK_GARNET_BLOCK.asItem());
 
-                net.minecraft.recipe.Ingredient pink_Garnet_Ingredient = Ingredient.ofItem(ModItems.PINK_GARNET);
+                GenerateRecipe("pink_garnet_helmet",Arrays.asList(
+                        ModItems.PINK_GARNET,ModItems.PINK_GARNET,ModItems.PINK_GARNET,
+                        ModItems.PINK_GARNET,null,ModItems.PINK_GARNET,
+                        null,null,null),
+                        RecipeCategory.COMBAT, ModItems.PINK_GARNET_HELMET, ModItems.PINK_GARNET);
+                GenerateRecipe("pink_garnet_chestplate",Arrays.asList(
+                        ModItems.PINK_GARNET,null,ModItems.PINK_GARNET,
+                        ModItems.PINK_GARNET,ModItems.PINK_GARNET,ModItems.PINK_GARNET,
+                        ModItems.PINK_GARNET,ModItems.PINK_GARNET,ModItems.PINK_GARNET),
+                        RecipeCategory.COMBAT, ModItems.PINK_GARNET_CHESTPLATE, ModItems.PINK_GARNET);
+                GenerateRecipe("pink_garnet_leggings",Arrays.asList(
+                        ModItems.PINK_GARNET,ModItems.PINK_GARNET,ModItems.PINK_GARNET,
+                        ModItems.PINK_GARNET,null,ModItems.PINK_GARNET,
+                        ModItems.PINK_GARNET,null,ModItems.PINK_GARNET),
+                        RecipeCategory.COMBAT, ModItems.PINK_GARNET_LEGGINGS, ModItems.PINK_GARNET);
+                GenerateRecipe("pink_garnet_boots",Arrays.asList(
+                        ModItems.PINK_GARNET,null,ModItems.PINK_GARNET,
+                        ModItems.PINK_GARNET,null,ModItems.PINK_GARNET,
+                        null,null,null),
+                        RecipeCategory.COMBAT, ModItems.PINK_GARNET_BOOTS, ModItems.PINK_GARNET);
 
-                createDoorRecipe(ModBlocks.PINK_GARNET_DOOR, pink_Garnet_Ingredient).criterion(hasItem(ModItems.PINK_GARNET), conditionsFromItem(ModItems.PINK_GARNET)).offerTo(exporter);
-                createTrapdoorRecipe(ModBlocks.PINK_GARNET_TRAPDOOR,pink_Garnet_Ingredient).criterion(hasItem(ModItems.PINK_GARNET), conditionsFromItem(ModItems.PINK_GARNET)).offerTo(exporter);
-                createSlabRecipe(RecipeCategory.MISC,ModBlocks.PINK_GARNET_SLAB,pink_Garnet_Ingredient).criterion(hasItem(ModItems.PINK_GARNET), conditionsFromItem(ModItems.PINK_GARNET)).offerTo(exporter);
-                createFenceRecipe(ModBlocks.PINK_GARNET_FENCE,pink_Garnet_Ingredient).criterion(hasItem(ModItems.PINK_GARNET), conditionsFromItem(ModItems.PINK_GARNET)).offerTo(exporter);
-                createFenceGateRecipe(ModBlocks.PINK_GARNET_FENCE_GATE,pink_Garnet_Ingredient).criterion(hasItem(ModItems.PINK_GARNET), conditionsFromItem(ModItems.PINK_GARNET)).offerTo(exporter);
-                createButtonRecipe(ModBlocks.PINK_GARNET_BUTTON,pink_Garnet_Ingredient).criterion(hasItem(ModItems.PINK_GARNET), conditionsFromItem(ModItems.PINK_GARNET)).offerTo(exporter);
-                createPressurePlateRecipe(RecipeCategory.MISC,ModBlocks.PINK_GARNET_PRESSURE_PLATE,pink_Garnet_Ingredient).criterion(hasItem(ModItems.PINK_GARNET), conditionsFromItem(ModItems.PINK_GARNET)).offerTo(exporter);
-                createStairsRecipe(ModBlocks.PINK_GARNET_STAIRS,pink_Garnet_Ingredient).criterion(hasItem(ModItems.PINK_GARNET), conditionsFromItem(ModItems.PINK_GARNET)).offerTo(exporter);
-                getWallRecipe(RecipeCategory.MISC,ModBlocks.PINK_GARNET_WALL,pink_Garnet_Ingredient).criterion(hasItem(ModItems.PINK_GARNET), conditionsFromItem(ModItems.PINK_GARNET)).offerTo(exporter);
+                net.minecraft.recipe.Ingredient pink_Garnet_Ingredient = Ingredient.ofItem(ModBlocks.PINK_GARNET_BLOCK.asItem());
+                net.minecraft.recipe.Ingredient pink_Garnet_Ingredient_Item = Ingredient.ofItem(ModItems.PINK_GARNET);
+
+
+                createDoorRecipe(ModBlocks.PINK_GARNET_DOOR, pink_Garnet_Ingredient)
+                        .criterion(hasItem(ModBlocks.PINK_GARNET_BLOCK.asItem()), conditionsFromItem(ModBlocks.PINK_GARNET_BLOCK.asItem())).offerTo(exporter);
+                createTrapdoorRecipe(ModBlocks.PINK_GARNET_TRAPDOOR,pink_Garnet_Ingredient)
+                        .criterion(hasItem(ModBlocks.PINK_GARNET_BLOCK.asItem()), conditionsFromItem(ModBlocks.PINK_GARNET_BLOCK.asItem())).offerTo(exporter);
+                createSlabRecipe(RecipeCategory.MISC,ModBlocks.PINK_GARNET_SLAB,pink_Garnet_Ingredient)
+                        .criterion(hasItem(ModBlocks.PINK_GARNET_BLOCK.asItem()), conditionsFromItem(ModBlocks.PINK_GARNET_BLOCK.asItem())).offerTo(exporter);
+                createFenceRecipe(ModBlocks.PINK_GARNET_FENCE,pink_Garnet_Ingredient)
+                        .criterion(hasItem(ModBlocks.PINK_GARNET_BLOCK.asItem()), conditionsFromItem(ModBlocks.PINK_GARNET_BLOCK.asItem())).offerTo(exporter);
+                createFenceGateRecipe(ModBlocks.PINK_GARNET_FENCE_GATE,pink_Garnet_Ingredient)
+                        .criterion(hasItem(ModBlocks.PINK_GARNET_BLOCK.asItem()), conditionsFromItem(ModBlocks.PINK_GARNET_BLOCK.asItem())).offerTo(exporter);
+                createButtonRecipe(ModBlocks.PINK_GARNET_BUTTON,pink_Garnet_Ingredient)
+                        .criterion(hasItem(ModBlocks.PINK_GARNET_BLOCK.asItem()), conditionsFromItem(ModBlocks.PINK_GARNET_BLOCK.asItem())).offerTo(exporter);
+                createPressurePlateRecipe(RecipeCategory.MISC,ModBlocks.PINK_GARNET_PRESSURE_PLATE,pink_Garnet_Ingredient_Item)
+                        .criterion(hasItem(ModItems.PINK_GARNET), conditionsFromItem(ModItems.PINK_GARNET)).offerTo(exporter);
+                createStairsRecipe(ModBlocks.PINK_GARNET_STAIRS,pink_Garnet_Ingredient)
+                        .criterion(hasItem(ModBlocks.PINK_GARNET_BLOCK.asItem()), conditionsFromItem(ModBlocks.PINK_GARNET_BLOCK.asItem())).offerTo(exporter);
+                getWallRecipe(RecipeCategory.MISC,ModBlocks.PINK_GARNET_WALL,pink_Garnet_Ingredient)
+                        .criterion(hasItem(ModBlocks.PINK_GARNET_BLOCK.asItem()), conditionsFromItem(ModBlocks.PINK_GARNET_BLOCK.asItem())).offerTo(exporter);
             }
         };
     }
