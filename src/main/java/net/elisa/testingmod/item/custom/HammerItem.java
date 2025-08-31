@@ -41,13 +41,25 @@ public class HammerItem extends Item {
                 for(int x = -range; x <= range; x++) {
                     for(int y = -range; y <= range; y++) {
                         for (int z = -range; z <= range; z++) {
-                            if (blockHit.getSide() == Direction.NORTH) {
-                                positions.add(new BlockPos(initalBlockPos.getX() + x, (int) Math.max(initalBlockPos.getY() + y,Math.floor(player.getPos().y)), initalBlockPos.getZ() + z + range));
 
+                            if (initalBlockPos.getY() >= player.getPos().y) {
+                                if (blockHit.getSide() == Direction.NORTH) {
+                                    positions.add(new BlockPos(initalBlockPos.getX() + x, (int) Math.max(initalBlockPos.getY() + y, Math.floor(player.getPos().y)), initalBlockPos.getZ() + z + range));
+
+                                } else {
+                                    positions.add(new BlockPos(initalBlockPos.getX() + x, (int) Math.max(initalBlockPos.getY() + y, Math.floor(player.getPos().y)), initalBlockPos.getZ() + z - range));
+                                }
                             }
+
                             else{
-                                positions.add(new BlockPos(initalBlockPos.getX() + x, (int) Math.max(initalBlockPos.getY() + y,Math.floor(player.getPos().y)), initalBlockPos.getZ() + z - range));
+                                if (blockHit.getSide() == Direction.NORTH) {
+                                    positions.add(new BlockPos(initalBlockPos.getX() + x, initalBlockPos.getY() + y, initalBlockPos.getZ() + z + range));
+
+                                } else {
+                                    positions.add(new BlockPos(initalBlockPos.getX() + x, initalBlockPos.getY() + y, initalBlockPos.getZ() + z - range));
+                                }
                             }
+
                         }
                     }
                 }
@@ -57,12 +69,23 @@ public class HammerItem extends Item {
                 for(int x = -range; x <= range; x++) {
                     for(int y = -range; y <= range; y++) {
                         for (int z = -range; z <= range; z++) {
-                            if(blockHit.getSide() == Direction.EAST) {
-                                positions.add(new BlockPos(initalBlockPos.getX() + z - range, (int) Math.max(initalBlockPos.getY() + y,Math.floor(player.getPos().y)), initalBlockPos.getZ() + x));
+
+                            if (initalBlockPos.getY() >= player.getPos().y) {
+                                if (blockHit.getSide() == Direction.EAST) {
+                                    positions.add(new BlockPos(initalBlockPos.getX() + z - range, (int) Math.max(initalBlockPos.getY() + y, Math.floor(player.getPos().y)), initalBlockPos.getZ() + x));
+                                } else {
+                                    positions.add(new BlockPos(initalBlockPos.getX() + z + range, (int) Math.max(initalBlockPos.getY() + y, Math.floor(player.getPos().y)), initalBlockPos.getZ() + x));
+                                }
                             }
+
                             else{
-                                positions.add(new BlockPos(initalBlockPos.getX() + z + range, (int) Math.max(initalBlockPos.getY() + y,Math.floor(player.getPos().y)), initalBlockPos.getZ() + x));
+                                if (blockHit.getSide() == Direction.EAST) {
+                                    positions.add(new BlockPos(initalBlockPos.getX() + z - range, initalBlockPos.getY() + y, initalBlockPos.getZ() + x));
+                                } else {
+                                    positions.add(new BlockPos(initalBlockPos.getX() + z + range, initalBlockPos.getY() + y, initalBlockPos.getZ() + x));
+                                }
                             }
+
                         }
                     }
                 }

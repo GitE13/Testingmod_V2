@@ -4,6 +4,7 @@ import net.elisa.testingmod.Testingmod;
 import net.elisa.testingmod.item.custom.ChiselItem;
 import net.elisa.testingmod.item.custom.HammerItem;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.elisa.testingmod.item.custom.ModArmorItem;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.component.type.ConsumableComponent;
@@ -53,7 +54,7 @@ public class ModItems {
                     new Item.Settings().pickaxe(ModToolMaterials.PINK_GARNET,7,-3.4f)) ) );
 
     public static final Item PINK_GARNET_HELMET = registerAdvancedItem("pink_garnet_helmet",
-            new Item(getSettings("pink_garnet_helmet",
+            new ModArmorItem(getSettings("pink_garnet_helmet",
                     new Item.Settings().armor(ModArmorMaterials.PINK_GARNET_ARMOR_MATERIAL, EquipmentType.HELMET)) ) );
     public static final Item PINK_GARNET_CHESTPLATE = registerAdvancedItem("pink_garnet_chestplate",
             new Item(getSettings("pink_garnet_chestplate",
@@ -63,7 +64,7 @@ public class ModItems {
                     new Item.Settings().armor(ModArmorMaterials.PINK_GARNET_ARMOR_MATERIAL, EquipmentType.LEGGINGS)) ) );
     public static final Item PINK_GARNET_BOOTS = registerAdvancedItem("pink_garnet_boots",
             new Item(getSettings("pink_garnet_boots",
-                    new Item.Settings().armor(ModArmorMaterials.PINK_GARNET_ARMOR_MATERIAL, EquipmentType.BOOTS).maxDamage(10)) ) );
+                    new Item.Settings().armor(ModArmorMaterials.PINK_GARNET_ARMOR_MATERIAL, EquipmentType.BOOTS)) ) );
 
     private static Item registerItem(String name) {
         Identifier id = Identifier.of(Testingmod.MOD_ID, name);
