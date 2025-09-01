@@ -1,0 +1,3 @@
+A GitHub Repository following the Fabric Modding Tutorials for 1.21.X series on Youtube by <a href="https://www.youtube.com/playlist?list=PLKGarocXCE1H_HxOYihQMq0mlpqiUJj4L"> Modding by Kaupenjoe</a>, with additions and changes, in large part to update the code for 1.21.8. <a href="https://www.youtube.com/playlist?list=PLKGarocXCE1H_HxOYihQMq0mlpqiUJj4L"> Link to the Youtube Playlist</a>
+<br><br>
+<a href="https://github.com/Tutorials-By-Kaupenjoe/Fabric-Tutorial-1.21.X">Original GitHub Repository by Kaupenjoe</a>
