@@ -66,6 +66,10 @@ public class ModItems {
             new Item(getSettings("pink_garnet_boots",
                     new Item.Settings().armor(ModArmorMaterials.PINK_GARNET_ARMOR_MATERIAL, EquipmentType.BOOTS)) ) );
 
+    public static final Item PINK_GARNET_HORSE_ARMOR = registerAdvancedItem("pink_garnet_horse_armor",
+            new Item(getSettings("pink_garnet_horse_armor",
+                    new Item.Settings().horseArmor(ModArmorMaterials.PINK_GARNET_ARMOR_MATERIAL).maxCount(1)) ) );
+
     private static Item registerItem(String name) {
         Identifier id = Identifier.of(Testingmod.MOD_ID, name);
         RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, id);

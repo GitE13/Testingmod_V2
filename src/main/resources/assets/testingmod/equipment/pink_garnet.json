@@ -1,5 +1,10 @@
 {
   "layers": {
+    "horse_body": [
+      {
+        "texture": "testingmod:pink_garnet"
+      }
+    ],
     "humanoid": [
       {
         "texture": "testingmod:pink_garnet"
