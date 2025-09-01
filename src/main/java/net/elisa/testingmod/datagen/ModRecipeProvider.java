@@ -1,7 +1,9 @@
 package net.elisa.testingmod.datagen;
 
+import net.elisa.testingmod.Testingmod;
 import net.elisa.testingmod.block.ModBlocks;
 import net.elisa.testingmod.item.ModItems;
+import net.elisa.testingmod.trim.ModTrimPatterns;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.recipe.RecipeExporter;
@@ -9,9 +11,13 @@ import net.minecraft.data.recipe.RecipeGenerator;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
+import net.minecraft.item.WindChargeItem;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.util.Identifier;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -166,6 +172,11 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModBlocks.PINK_GARNET_BLOCK.asItem()), conditionsFromItem(ModBlocks.PINK_GARNET_BLOCK.asItem())).offerTo(exporter);
                 getWallRecipe(RecipeCategory.MISC,ModBlocks.PINK_GARNET_WALL,pink_Garnet_Ingredient)
                         .criterion(hasItem(ModBlocks.PINK_GARNET_BLOCK.asItem()), conditionsFromItem(ModBlocks.PINK_GARNET_BLOCK.asItem())).offerTo(exporter);
+
+                offerSmithingTrimRecipe(ModItems.WEIRD_SMITHING_TEMPLATE, ModTrimPatterns.WEIRD,
+                        RegistryKey.of(RegistryKeys.RECIPE, Identifier.of(Testingmod.MOD_ID, "weird")));
+
+                offerSmithingTemplateCopyingRecipe(ModItems.WEIRD_SMITHING_TEMPLATE,pink_Garnet_Ingredient);
             }
         };
     }

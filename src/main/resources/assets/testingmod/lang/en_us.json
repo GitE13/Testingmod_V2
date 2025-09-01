@@ -44,6 +44,11 @@
 
   "item.testingmod.pink_garnet_horse_armor": "Pink Garnet Horse Armor",
 
+  "item.testingmod.weird_armor_trim_smithing_template": "Weird Smithing Template",
+
+  "trim_material.testingmod.pink_garnet": "Pink Garnet Material",
+  "trim_pattern.testingmod.weird": "Weird Armor Pattern",
+
 
   "itemgroup.testingmod.pink_garnet_items": "Pink Garnet Items",
   "itemgroup.testingmod.pink_garnet_blocks": "Pink Garnet Blocks"

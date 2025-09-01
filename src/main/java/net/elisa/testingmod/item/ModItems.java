@@ -11,14 +11,18 @@ import net.minecraft.component.type.ConsumableComponent;
 import net.minecraft.component.type.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
+import net.minecraft.item.Items;
+import net.minecraft.item.SmithingTemplateItem;
 import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
 
 import java.util.Objects;
+import java.util.function.Function;
 
 public class ModItems {
 
@@ -70,6 +74,9 @@ public class ModItems {
             new Item(getSettings("pink_garnet_horse_armor",
                     new Item.Settings().horseArmor(ModArmorMaterials.PINK_GARNET_ARMOR_MATERIAL).maxCount(1)) ) );
 
+    public static final Item WEIRD_SMITHING_TEMPLATE = registerItem2("weird_armor_trim_smithing_template",
+            SmithingTemplateItem::of);
+
     private static Item registerItem(String name) {
         Identifier id = Identifier.of(Testingmod.MOD_ID, name);
         RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, id);
@@ -93,6 +100,12 @@ public class ModItems {
 
     private static Item.Settings getSettings(String name, Item.Settings itemSettings){
         return itemSettings.registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Testingmod.MOD_ID, name)));
+    }
+
+
+    private static Item registerItem2(String name, Function<Item.Settings, Item> function) {
+        return Registry.register(Registries.ITEM, Identifier.of(Testingmod.MOD_ID, name),
+                function.apply(new Item.Settings().registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Testingmod.MOD_ID, name)))));
     }
 
     public static void registerModItems(){

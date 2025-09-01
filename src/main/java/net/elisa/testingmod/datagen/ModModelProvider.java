@@ -4,11 +4,15 @@ import net.elisa.testingmod.block.ModBlocks;
 import net.elisa.testingmod.block.custom.PinkGarnetLampBlock;
 import net.elisa.testingmod.item.ModArmorMaterials;
 import net.elisa.testingmod.item.ModItems;
+import net.elisa.testingmod.trim.ModTrimMaterials;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.minecraft.client.data.*;
 import net.minecraft.client.render.model.json.ModelVariant;
 import net.minecraft.client.render.model.json.WeightedVariant;
+import net.minecraft.item.Item;
+import net.minecraft.item.equipment.trim.ArmorTrimAssets;
+import net.minecraft.item.equipment.trim.ArmorTrimMaterials;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.collection.Pool;
 
@@ -66,5 +70,6 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.registerArmor(ModItems.PINK_GARNET_BOOTS, ModArmorMaterials.PINK_GARNET_KEY, ItemModelGenerator.BOOTS_TRIM_ID_PREFIX, false);
 
         itemModelGenerator.register(ModItems.PINK_GARNET_HORSE_ARMOR, Models.GENERATED);
+        itemModelGenerator.register(ModItems.WEIRD_SMITHING_TEMPLATE, Models.GENERATED);
     }
 }
