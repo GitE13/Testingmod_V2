@@ -24,6 +24,11 @@
 
   "item.testingmod.pink_garnet_lamp": "Pink Garnet Lamp",
 
+  "tag.block.testingmod.needs_pink_garnet_tool": "Needs Pink Garnet Tool",
+  "tag.block.testingmod.incorrect_for_pink_garnet_tool": "Incorrect for Pink Garnet Tool",
+  "tag.item.testingmod.transformable_items": "Transformable Items",
+  "tag.item.testingmod.pink_garnet_repair": "Pink Garnet Repairable Items",
+
 
   "tooltip.testingmod.chisel":  "Press §eShift§r for more Information",
   "tooltip.testingmod.chisel.shift_down":  "This item chisels blocks into Bricks",

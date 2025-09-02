@@ -1,8 +1,10 @@
 {
   "values": [
-    "#minecraft:incorrect_for_iron_tool"
-  ],
-  "remove": [
-    "#tutorialmod:needs_pink_garnet_tool"
+    "minecraft:obsidian",
+    "minecraft:crying_obsidian",
+    "minecraft:netherite_block",
+    "minecraft:respawn_anchor",
+    "minecraft:ancient_debris",
+    "testingmod:deepslate_pink_garnet_ore"
   ]
 }

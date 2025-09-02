@@ -36,7 +36,6 @@ public class ModArmorItem extends Item {
         if(!world.isClient()) {
             if(entity instanceof PlayerEntity player) {
                 if(hasFullSuitOfArmorOn(player)) {
-                    System.out.println("Has armor");
                     evaluateArmorEffects(player);
                 }
             }

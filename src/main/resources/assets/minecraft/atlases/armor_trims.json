@@ -40,6 +40,7 @@
         "trims/entity/humanoid_leggings/flow",
         "trims/entity/humanoid/bolt",
         "trims/entity/humanoid_leggings/bolt",
+
         "testingmod:trims/entity/humanoid/weird",
         "testingmod:trims/entity/humanoid_leggings/weird"
       ],
