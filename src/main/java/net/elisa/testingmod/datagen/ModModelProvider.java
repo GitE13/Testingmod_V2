@@ -86,5 +86,8 @@ public class ModModelProvider extends FabricModelProvider {
                 usedChisel,
                 unusedChisel
         );
+
+
+        itemModelGenerator.registerBow(ModItems.WEIRD_BOW);
     }
 }

@@ -10,6 +10,7 @@ import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.ConsumableComponent;
 import net.minecraft.component.type.FoodComponent;
 import net.minecraft.component.type.ProvidesTrimMaterialComponent;
+import net.minecraft.item.BowItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.item.SmithingTemplateItem;
@@ -76,6 +77,10 @@ public class ModItems {
 
     public static final Item WEIRD_SMITHING_TEMPLATE = registerItem2("weird_armor_trim_smithing_template",
             SmithingTemplateItem::of);
+
+    public static final Item WEIRD_BOW = registerAdvancedItem("weird_bow",
+            new BowItem(getSettings("weird_bow",
+                    new Item.Settings().maxDamage(500)) ) );
 
     private static Item registerItem(String name) {
         Identifier id = Identifier.of(Testingmod.MOD_ID, name);
