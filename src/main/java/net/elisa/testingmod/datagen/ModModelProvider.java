@@ -2,12 +2,15 @@ package net.elisa.testingmod.datagen;
 
 import net.elisa.testingmod.block.ModBlocks;
 import net.elisa.testingmod.block.custom.PinkGarnetLampBlock;
+import net.elisa.testingmod.component.ModDataComponentTypes;
 import net.elisa.testingmod.item.ModArmorMaterials;
 import net.elisa.testingmod.item.ModItems;
 import net.elisa.testingmod.trim.ModTrimMaterials;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.minecraft.client.data.*;
+import net.minecraft.client.render.item.model.ItemModel;
+import net.minecraft.client.render.item.property.bool.HasComponentProperty;
 import net.minecraft.client.render.model.json.ModelVariant;
 import net.minecraft.client.render.model.json.WeightedVariant;
 import net.minecraft.item.Item;
@@ -52,7 +55,7 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.RAW_PINK_GARNET, Models.GENERATED);
         itemModelGenerator.register(ModItems.PINK_GARNET, Models.GENERATED);
-        itemModelGenerator.register(ModItems.CHISEL, Models.GENERATED);
+        //itemModelGenerator.register(ModItems.CHISEL, Models.GENERATED);
         itemModelGenerator.register(ModItems.CAULIFLOWER, Models.GENERATED);
         itemModelGenerator.register(ModItems.STARLIGHT_ASHES, Models.GENERATED);
 
@@ -71,5 +74,17 @@ public class ModModelProvider extends FabricModelProvider {
 
         itemModelGenerator.register(ModItems.PINK_GARNET_HORSE_ARMOR, Models.GENERATED);
         itemModelGenerator.register(ModItems.WEIRD_SMITHING_TEMPLATE, Models.GENERATED);
+
+        Item chisel = ModItems.CHISEL;
+
+        ItemModel.Unbaked unusedChisel = ItemModels.basic(itemModelGenerator.upload(chisel, Models.GENERATED));
+        ItemModel.Unbaked usedChisel = ItemModels.basic(itemModelGenerator.registerSubModel(chisel, "_used", Models.GENERATED));
+
+        itemModelGenerator.registerCondition(
+                chisel,
+                new HasComponentProperty(ModDataComponentTypes.COORDINATES, true),
+                usedChisel,
+                unusedChisel
+        );
     }
 }
