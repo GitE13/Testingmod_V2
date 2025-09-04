@@ -4,6 +4,7 @@ import net.elisa.testingmod.item.ModItems;
 import net.elisa.testingmod.util.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
@@ -47,6 +48,22 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider{
 
         valueLookupBuilder(ItemTags.TRIM_MATERIALS)
                 .add(ModItems.PINK_GARNET);
+
+        valueLookupBuilder(ItemTags.CHEST_ARMOR_ENCHANTABLE)
+                .add(ModItems.PINK_GARNET_CHESTPLATE);
+        valueLookupBuilder(ItemTags.FOOT_ARMOR_ENCHANTABLE)
+                .add(ModItems.PINK_GARNET_BOOTS);
+        valueLookupBuilder(ItemTags.HEAD_ARMOR_ENCHANTABLE)
+                .add(ModItems.PINK_GARNET_HELMET);
+        valueLookupBuilder(ItemTags.LEG_ARMOR_ENCHANTABLE)
+                .add(ModItems.PINK_GARNET_LEGGINGS);
+        valueLookupBuilder(ItemTags.BOW_ENCHANTABLE)
+                .add(ModItems.WEIRD_BOW);
+        valueLookupBuilder(ItemTags.DURABILITY_ENCHANTABLE)
+                .add(ModItems.WEIRD_BOW)
+                .add(ModItems.CHISEL);
+        valueLookupBuilder(ItemTags.MINING_ENCHANTABLE)
+                .add(ModItems.PINK_GARNET_HAMMER);
 
     }
 

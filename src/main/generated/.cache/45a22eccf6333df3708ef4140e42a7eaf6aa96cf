@@ -1,5 +1,12 @@
 // 1.21.8	-999999999-01-01T00:00:00	Testingmod/Tags for minecraft:item
 b6cb6067cccd4cffc4441309a1264efb320173d6 data/minecraft/tags/item/axes.json
+4c1b6455a11fdaeb1c9e1ed91ad7eef9c2453c2f data/minecraft/tags/item/enchantable/bow.json
+f52c5d93be702ae17cba1d183dcd466b9a4c7bc3 data/minecraft/tags/item/enchantable/chest_armor.json
+7782eb96a745e09813fd5fdf85188dac0c99f7fe data/minecraft/tags/item/enchantable/durability.json
+02e5f9b950990f2b7c79e7def28d8c398fc52a0e data/minecraft/tags/item/enchantable/foot_armor.json
+e62d111bbf40aa3028d6728f30f19f586050c94c data/minecraft/tags/item/enchantable/head_armor.json
+6db3f8f033fc04a788639c5a2028a51bb7984451 data/minecraft/tags/item/enchantable/leg_armor.json
+fa6571f11f03ddb73ae583e1b4ad0955ed46b1d1 data/minecraft/tags/item/enchantable/mining.json
 2f5e719a4491a2fb559a59b1dae781633759d8a7 data/minecraft/tags/item/hoes.json
 479fad003be5f5cb673ce19e8f207e459d689448 data/minecraft/tags/item/pickaxes.json
 3fadb3a9435dfe4b912e9d1f78fb3480c133d6c8 data/minecraft/tags/item/shovels.json
