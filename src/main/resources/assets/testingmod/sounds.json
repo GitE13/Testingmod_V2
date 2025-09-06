@@ -1,0 +1,45 @@
+{
+  "chisel_use": {
+    "subtitle": "subtitles.testingmod.item.chisel.use",
+    "sounds": [
+      "testingmod:chisel_use"
+    ]
+  },
+  "magic_block_break": {
+    "subtitle": "subtitles.block.generic.break",
+    "sounds": [
+      "testingmod:magic_block_break"
+    ]
+  },
+  "magic_block_step": {
+    "subtitle": "subtitles.block.generic.footsteps",
+    "sounds": [
+      "testingmod:magic_block_step"
+    ]
+  },
+  "magic_block_place": {
+    "subtitle": "subtitles.block.generic.place",
+    "sounds": [
+      "testingmod:magic_block_place"
+    ]
+  },
+  "magic_block_hit": {
+    "subtitle": "subtitles.block.generic.hit",
+    "sounds": [
+      "testingmod:magic_block_hit"
+    ]
+  },
+  "magic_block_fall": {
+    "sounds": [
+      "testingmod:magic_block_fall"
+    ]
+  },
+  "bar_brawl": {
+    "sounds": [
+      {
+        "name": "testingmod:bar_brawl",
+        "stream": true
+      }
+    ]
+  }
+}

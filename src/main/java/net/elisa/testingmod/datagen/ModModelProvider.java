@@ -89,5 +89,7 @@ public class ModModelProvider extends FabricModelProvider {
 
 
         itemModelGenerator.registerBow(ModItems.WEIRD_BOW);
+
+        itemModelGenerator.register(ModItems.BAR_BRAWL_MUSIC_DISC, Models.GENERATED);
     }
 }

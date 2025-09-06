@@ -56,6 +56,10 @@
 
   "item.testingmod.weird_bow": "Weird Bow",
 
+  "item.testingmod.bar_brawl_music_disc": "Bar Brawl Music Disc",
+
+  "item.testingmod.bar_brawl_music_disc.desc": "Bryan Tech - Bar Brawl (CC0)",
+
 
   "itemgroup.testingmod.pink_garnet_items": "Pink Garnet Items",
   "itemgroup.testingmod.pink_garnet_blocks": "Pink Garnet Blocks"

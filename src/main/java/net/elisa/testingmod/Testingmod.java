@@ -3,6 +3,7 @@ import net.elisa.testingmod.block.ModBlocks;
 import net.elisa.testingmod.component.ModDataComponentTypes;
 import net.elisa.testingmod.item.ModItemGroups;
 import net.elisa.testingmod.item.ModItems;
+import net.elisa.testingmod.sound.ModSounds;
 import net.elisa.testingmod.util.HammerUsageEvent;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.item.v1.ItemTooltipCallback;
@@ -39,6 +40,8 @@ public class Testingmod implements ModInitializer {
         ModBlocks.registerModBlocks();
 
         ModDataComponentTypes.registerDataComponentTypes();
+
+        ModSounds.RegisterSounds();
 
         FuelRegistryEvents.BUILD.register((builder, context) -> {
             builder.add(ModItems.STARLIGHT_ASHES, 600);

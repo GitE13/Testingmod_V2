@@ -1,5 +1,6 @@
 // 1.21.8	-999999999-01-01T00:00:00	Testingmod/Tags for minecraft:item
 b6cb6067cccd4cffc4441309a1264efb320173d6 data/minecraft/tags/item/axes.json
+e15b8f9af5e3c6ac6e5c9aea25cab5befb5deeb3 data/minecraft/tags/item/creeper_drop_music_discs.json
 4c1b6455a11fdaeb1c9e1ed91ad7eef9c2453c2f data/minecraft/tags/item/enchantable/bow.json
 f52c5d93be702ae17cba1d183dcd466b9a4c7bc3 data/minecraft/tags/item/enchantable/chest_armor.json
 7782eb96a745e09813fd5fdf85188dac0c99f7fe data/minecraft/tags/item/enchantable/durability.json

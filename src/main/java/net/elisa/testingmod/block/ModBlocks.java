@@ -3,6 +3,7 @@ package net.elisa.testingmod.block;
 import net.elisa.testingmod.Testingmod;
 import net.elisa.testingmod.block.custom.MagicBlock;
 import net.elisa.testingmod.block.custom.PinkGarnetLampBlock;
+import net.elisa.testingmod.sound.ModSounds;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
@@ -40,7 +41,7 @@ public class ModBlocks {
             new MagicBlock(
                     getSettings("magic_block",
                             AbstractBlock.Settings.create().strength(1f)
-                                    .requiresTool()) ) );
+                                    .requiresTool().sounds(ModSounds.MAGIC_BLOCK_SOUNDS)) ) );
 
 
     public static final Block PINK_GARNET_STAIRS = registerAdvancedBlock("pink_garnet_stairs",

@@ -65,6 +65,9 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider{
         valueLookupBuilder(ItemTags.MINING_ENCHANTABLE)
                 .add(ModItems.PINK_GARNET_HAMMER);
 
+        valueLookupBuilder(ItemTags.CREEPER_DROP_MUSIC_DISCS)
+                .add(ModItems.BAR_BRAWL_MUSIC_DISC);
+
     }
 
 }
