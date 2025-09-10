@@ -1,6 +1,7 @@
 package net.elisa.testingmod;
 import net.elisa.testingmod.block.ModBlocks;
 import net.elisa.testingmod.component.ModDataComponentTypes;
+import net.elisa.testingmod.effect.ModEffects;
 import net.elisa.testingmod.item.ModItemGroups;
 import net.elisa.testingmod.item.ModItems;
 import net.elisa.testingmod.sound.ModSounds;
@@ -42,6 +43,8 @@ public class Testingmod implements ModInitializer {
         ModDataComponentTypes.registerDataComponentTypes();
 
         ModSounds.RegisterSounds();
+
+        ModEffects.registerEffects();
 
         FuelRegistryEvents.BUILD.register((builder, context) -> {
             builder.add(ModItems.STARLIGHT_ASHES, 600);
